@@ -2,6 +2,7 @@
     "files.associations": {
         "*.ejs": "html",
         "iosfwd": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "*.tcc": "cpp"
     }
 }
