@@ -16,25 +16,15 @@ void create_carpet()
     char b = 0;
     int width = 0;
     int height = 0;
-    cout << "please enter num of width: ";
-    cin >> width;
-    cout << "please enter num of height: ";
-    cin >> height;
-    cout << "choose your first symbol: ";
-    
-    cin >> a;
-    if (a != EOF)
-    {
-        cout << "choose your second symbol: ";
-        cin >> b;
-    }
+    get_int(width, "please enter num of width: ");
+    get_int(height, "please enter num of height: ");
+
+    get_char(a, "choose your first symbol: ");
+    get_char(b, "choose your second symbol: ");
     
     cout << endl;
 
-    if (a != EOF && b != EOF)
-    {
-        cout << mat(width, height, a, b) << endl << endl;
-    }
+    cout << mat(width, height, a, b) << endl << endl;
 }
 
 
@@ -52,12 +42,18 @@ int main()
             cout << "2. help and instructions" << endl;
             cout << "3. clean screen" << endl;
             cout << "4. quit the program" << endl;
-            cout << "\nPlease choose your option (1 - 4): ";
-            cin >> choice;
+            get_int(choice, "\nPlease choose your option (1 - 4): ");
             switch (choice)
             {
                 case CREATE:
                     create_carpet();
+                    break;
+
+                case HELP:
+                    cout << "To make the carpet you need a:" << endl;
+                    cout << "width(int), height(int), symbol 1 (char), symbol 2 (char)" << endl;
+                    cout << "the size - width and height must be positive odd numbers" << endl;
+                    cout << "the symbols must be printable (from ascii 33 to 126)" << endl;
                     break;
                 
                 case CLEAR_SCREEN:
@@ -67,6 +63,7 @@ int main()
                 case QUIT:
                     cout << "Goodbye!" << endl;
                     break;
+
                 default:
                     cout << "this is invalid choice" << endl;
                     cout << "please try again" << endl << endl;
@@ -75,7 +72,7 @@ int main()
         }
         catch(const std::exception& e)
         {
-            std::cerr << e.what() << "\n\n";
+            std::cerr << "\n" << e.what() << "\n\n";
         }
         
         

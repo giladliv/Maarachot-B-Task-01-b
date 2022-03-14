@@ -74,30 +74,30 @@ void ariel::round_mat(int rows, int cols, string frame_chars, vector<string>& ma
     }
 }
 
-void ariel::get_intput(int& val, string msg)
+void ariel::get_int(int& val, const string& msg)
 {
-    if (msg != "")
+    if (!msg.empty())
     {
         cout << msg;
     }
     if (!(cin >> val))
     {
         cin.clear();
-        cin.ignore();
+        cin.ignore(BUFFER_LEN, '\n');
         throw MessageException("invalid input - please enter integer");
     } 
 }
 
-void ariel::get_intput(char& val, string msg = "")
+void ariel::get_char(char& val, const string& msg)
 {
-    if (msg != "")
+    if (!msg.empty())
     {
         cout << msg;
     }
     if (!(cin >> val))
     {
         cin.clear();
-        cin.ignore();
+        cin.ignore(BUFFER_LEN, '\n');
         throw MessageException("invalid input - please enter char");
     }
 }

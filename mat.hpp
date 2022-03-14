@@ -7,6 +7,8 @@
 #include <cctype>
 #include <vector>
 
+#define BUFFER_LEN 10000
+
 using namespace std;
 
 namespace ariel
@@ -25,8 +27,8 @@ namespace ariel
     vector<string> makeArrOfStr(int rows, int cols, char initCh = ' ');
     void round_mat(int rows, int cols, string frame_chars, vector<string>& mat);
 
-    void get_intput(int& val, string msg = "");
-    void get_intput(char& val, string msg = "");
+    void get_int(int& val, const string& msg = "");
+    void get_char(char& val, const string& msg = "");
 }
 
 
