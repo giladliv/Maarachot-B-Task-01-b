@@ -10,10 +10,6 @@ string ariel::mat(int cols, int rows, char a, char b)
     {
         throw MessageException("Mat size is always odd");
     }
-    if (a == ' ' || b == ' ' || isprint(a) == 0 || isprint(b) == 0)
-    {
-        throw MessageException("The symbols must be printable only");
-    }
     
     vector<string> strVct = makeArrOfStr(rows, cols);
     string charsForMat = string() + a + b;
