@@ -5,6 +5,7 @@
         "iostream": "cpp",
         "*.tcc": "cpp",
         "cctype": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "random": "cpp"
     }
 }

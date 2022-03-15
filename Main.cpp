@@ -53,7 +53,7 @@ int main()
                     cout << "To make the carpet you need a:" << endl;
                     cout << "width(int), height(int), symbol 1 (char), symbol 2 (char)" << endl;
                     cout << "the size - width and height must be positive odd numbers" << endl;
-                    cout << "the symbols must be printable (from ascii 33 to 126)" << endl;
+                    cout << endl;
                     break;
                 
                 case CLEAR_SCREEN:
